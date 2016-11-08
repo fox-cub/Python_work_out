@@ -1,0 +1,6 @@
+def anti_vowel(text):
+    text = list(text)
+    vowel = ['aeiouAEIOU']
+    result =[]
+    for letter in range(len(text)):
+        
