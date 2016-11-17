@@ -1,0 +1,8 @@
+
+def censor(text, word):
+    censored_text = ''
+    if word in text:
+        censored_text = text.replace(word, ('*' * len(word)))
+        print censored_text
+    return censored_text
+censor('Hellow beautiful world', 'beautiful')
