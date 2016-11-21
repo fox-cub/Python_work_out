@@ -1,8 +1,11 @@
 
 def censor(text, word):
-    censored_text = ''
-    if word in text:
-        censored_text = text.replace(word, ('*' * len(word)))
-        print censored_text
-    return censored_text
-censor('Hellow beautiful world', 'beautiful')
+    text_2 = text.split()
+    result = ''
+    for words in range(len(text_2)):
+        if text_2[words] == word:
+            text_2[words] = '*' * len(word)
+            result = ' '.join(text_2)
+            print result
+    return result
+censor('this hack is wack hack', 'is')
