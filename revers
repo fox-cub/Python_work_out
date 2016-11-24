@@ -1,8 +1,0 @@
-def revers(text):
-    list_letter = list(text)
-    revers_text = []
-    for letter in range(len(text)):
-        revers_text.append(list_letter.pop())
-    print revers_text
-    return ''.join(revers_text)
-revers('Python$')
