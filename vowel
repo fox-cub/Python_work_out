@@ -1,0 +1,11 @@
+vowel = ['aeiouAEIOU']
+
+
+def anti_vowel(text):
+    text = list(text)
+    anti = []
+    for letter in text:
+        anti.append(text.remove(vowel[]))
+    print anti
+    return anti
+anti_vowel('Hellow World')
