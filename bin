@@ -1,5 +1,4 @@
-print 'Bin ' + bin(0b1110 | 0b101)
-
+print 'Bin_OR ' + bin(0b1110 | 0b101)
 
 def bin_or(bitwise_a, bitwise_b):
     type(bitwise_a) is str
@@ -19,6 +18,33 @@ def bin_or(bitwise_a, bitwise_b):
             result_or += bin_a
         else:
             result_or += bin_b
-    print '0b' + result_or
+    print 'OR  ' + '0b' + result_or
     return result_or    
 bin_or('0b1110', '0b101')
+#------------------------------------------------
+
+print 'Bin_XOR ' + bin(0b1110 ^ 0b101)
+
+def bin_xor(xor_a, xor_b):
+    type(xor_a) is str
+    type(xor_b) is str
+    a = xor_a[2:]
+    b = xor_b[2:]
+    result_xor = ''
+    if len(a) > len(b):
+        b = b.zfill(len(a))
+    elif len(a) < len(b):
+        a = a.zfill(len(b)) 
+    for i, bin_a in enumerate(a):
+        bin_b = b[i]
+        if bin_a == bin_b:
+            result_xor += '0'
+        elif bin_a > bin_b:
+            result_xor += bin_a
+        else:
+            result_xor += bin_b
+    print 'XOR  ' + '0b' + result_xor
+    return result_xor    
+bin_xor('0b1110', '0b101')
+    
+
