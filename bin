@@ -1,0 +1,24 @@
+print 'Bin ' + bin(0b1110 | 0b101)
+
+
+def bin_or(bitwise_a, bitwise_b):
+    type(bitwise_a) is str
+    type(bitwise_b) is str
+    result_or = ''
+    a = bitwise_a[2:]
+    b = bitwise_b[2:]
+    if len(a) > len(b):
+        b = b.zfill(len(a))
+    elif len(a) < len(b):
+        a = a.zfill(len(b))    
+    for i, bin_a in enumerate(a):
+        bin_b = b[i]
+        if bin_a == bin_b:
+            result_or += bin_a
+        elif bin_a > bin_b:
+            result_or += bin_a
+        else:
+            result_or += bin_b
+    print '0b' + result_or
+    return result_or    
+bin_or('0b1110', '0b101')
