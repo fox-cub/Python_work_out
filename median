@@ -1,0 +1,16 @@
+def median(numbers):
+    numbers = sorted(numbers)
+    result = 0
+    odd_ind = (len(numbers) / 2.0) + 0.5 # looking for an index of middle odd number in list
+    even_ind = len(numbers) / 2
+    print odd_ind
+    print even_ind
+    if len(numbers) % 2 != 0:
+        result = numbers[odd_ind]
+        print result
+        return result
+    else:
+        result = (numbers[even_ind] + numbers[even_ind - 1]) / 2.0
+        print result
+    return result
+median([5, 6, 7, 8, 1, 2])

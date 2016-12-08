@@ -1,0 +1,12 @@
+
+def count(sequence, item):
+    result = 0
+    for i in sequence:
+        if type(i) is list:
+            for y in i:
+                if y == item:
+                    result += 1
+        elif i == item:
+            result += 1
+    print result
+count([[1, 'aaa'], 1, 'ooo', [2, 'ooo', 1], ['aaa', 1]], 2)
